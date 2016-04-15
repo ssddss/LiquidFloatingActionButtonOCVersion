@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [[NSNotificationCenter defaultCenter]addObserver:nil selector:nil name:nil object:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -13,6 +13,14 @@
 		E5424E631CC0952600A3681D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5424E611CC0952600A3681D /* Main.storyboard */; };
 		E5424E651CC0952600A3681D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5424E641CC0952600A3681D /* Assets.xcassets */; };
 		E5424E681CC0952600A3681D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5424E661CC0952600A3681D /* LaunchScreen.storyboard */; };
+		E5424E741CC0969800A3681D /* NSObject+PointExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E5424E731CC0969800A3681D /* NSObject+PointExtension.m */; };
+		E5D3342F1CC0BC8500070A1A /* CALayer+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3342E1CC0BC8500070A1A /* CALayer+Shadow.m */; };
+		E5D334321CC0C0D800070A1A /* CGMath.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D334311CC0C0D800070A1A /* CGMath.m */; };
+		E5D334351CC0C48E00070A1A /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D334341CC0C48E00070A1A /* UIColor+Extension.m */; };
+		E5D334381CC0C82C00070A1A /* SimpleCircleLiquidEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D334371CC0C82C00070A1A /* SimpleCircleLiquidEngine.m */; };
+		E5D3343D1CC0CAA400070A1A /* LiquittableCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3343C1CC0CAA400070A1A /* LiquittableCircle.m */; };
+		E5D334401CC0DBBA00070A1A /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3343F1CC0DBBA00070A1A /* NSArray+Extension.m */; };
+		E5D334431CC0E65000070A1A /* NSObject+BezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D334421CC0E65000070A1A /* NSObject+BezierPath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,24 @@
 		E5424E641CC0952600A3681D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5424E671CC0952600A3681D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5424E691CC0952600A3681D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5424E721CC0969800A3681D /* NSObject+PointExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PointExtension.h"; sourceTree = "<group>"; };
+		E5424E731CC0969800A3681D /* NSObject+PointExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PointExtension.m"; sourceTree = "<group>"; };
+		E5D3342D1CC0BC8500070A1A /* CALayer+Shadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Shadow.h"; sourceTree = "<group>"; };
+		E5D3342E1CC0BC8500070A1A /* CALayer+Shadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Shadow.m"; sourceTree = "<group>"; };
+		E5D334301CC0C0D800070A1A /* CGMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMath.h; sourceTree = "<group>"; };
+		E5D334311CC0C0D800070A1A /* CGMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMath.m; sourceTree = "<group>"; };
+		E5D334331CC0C48E00070A1A /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		E5D334341CC0C48E00070A1A /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		E5D334361CC0C82C00070A1A /* SimpleCircleLiquidEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCircleLiquidEngine.h; sourceTree = "<group>"; };
+		E5D334371CC0C82C00070A1A /* SimpleCircleLiquidEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCircleLiquidEngine.m; sourceTree = "<group>"; };
+		E5D334391CC0C91D00070A1A /* LiquidFloatingButtonHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiquidFloatingButtonHeader.h; sourceTree = "<group>"; };
+		E5D3343A1CC0C95600070A1A /* LiquidFloatingActionButtonPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiquidFloatingActionButtonPrefixHeader.pch; sourceTree = "<group>"; };
+		E5D3343B1CC0CAA400070A1A /* LiquittableCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiquittableCircle.h; sourceTree = "<group>"; };
+		E5D3343C1CC0CAA400070A1A /* LiquittableCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiquittableCircle.m; sourceTree = "<group>"; };
+		E5D3343E1CC0DBBA00070A1A /* NSArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
+		E5D3343F1CC0DBBA00070A1A /* NSArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
+		E5D334411CC0E65000070A1A /* NSObject+BezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BezierPath.h"; sourceTree = "<group>"; };
+		E5D334421CC0E65000070A1A /* NSObject+BezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BezierPath.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +84,9 @@
 		E5424E571CC0952600A3681D /* LiquidFloatingActionButtonOCVersion */ = {
 			isa = PBXGroup;
 			children = (
+				E5424E6F1CC0961E00A3681D /* Views */,
+				E5424E701CC0961E00A3681D /* Tools */,
+				E5424E711CC0961E00A3681D /* Category */,
 				E5424E5B1CC0952600A3681D /* AppDelegate.h */,
 				E5424E5C1CC0952600A3681D /* AppDelegate.m */,
 				E5424E5E1CC0952600A3681D /* ViewController.h */,
@@ -67,6 +96,7 @@
 				E5424E661CC0952600A3681D /* LaunchScreen.storyboard */,
 				E5424E691CC0952600A3681D /* Info.plist */,
 				E5424E581CC0952600A3681D /* Supporting Files */,
+				E5D334391CC0C91D00070A1A /* LiquidFloatingButtonHeader.h */,
 			);
 			path = LiquidFloatingActionButtonOCVersion;
 			sourceTree = "<group>";
@@ -75,8 +105,46 @@
 			isa = PBXGroup;
 			children = (
 				E5424E591CC0952600A3681D /* main.m */,
+				E5D3343A1CC0C95600070A1A /* LiquidFloatingActionButtonPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E5424E6F1CC0961E00A3681D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E5D334361CC0C82C00070A1A /* SimpleCircleLiquidEngine.h */,
+				E5D334371CC0C82C00070A1A /* SimpleCircleLiquidEngine.m */,
+				E5D3343B1CC0CAA400070A1A /* LiquittableCircle.h */,
+				E5D3343C1CC0CAA400070A1A /* LiquittableCircle.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E5424E701CC0961E00A3681D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E5D334301CC0C0D800070A1A /* CGMath.h */,
+				E5D334311CC0C0D800070A1A /* CGMath.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		E5424E711CC0961E00A3681D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E5424E721CC0969800A3681D /* NSObject+PointExtension.h */,
+				E5424E731CC0969800A3681D /* NSObject+PointExtension.m */,
+				E5D3342D1CC0BC8500070A1A /* CALayer+Shadow.h */,
+				E5D3342E1CC0BC8500070A1A /* CALayer+Shadow.m */,
+				E5D334331CC0C48E00070A1A /* UIColor+Extension.h */,
+				E5D334341CC0C48E00070A1A /* UIColor+Extension.m */,
+				E5D3343E1CC0DBBA00070A1A /* NSArray+Extension.h */,
+				E5D3343F1CC0DBBA00070A1A /* NSArray+Extension.m */,
+				E5D334411CC0E65000070A1A /* NSObject+BezierPath.h */,
+				E5D334421CC0E65000070A1A /* NSObject+BezierPath.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +219,15 @@
 			files = (
 				E5424E601CC0952600A3681D /* ViewController.m in Sources */,
 				E5424E5D1CC0952600A3681D /* AppDelegate.m in Sources */,
+				E5D334431CC0E65000070A1A /* NSObject+BezierPath.m in Sources */,
+				E5424E741CC0969800A3681D /* NSObject+PointExtension.m in Sources */,
+				E5D334351CC0C48E00070A1A /* UIColor+Extension.m in Sources */,
 				E5424E5A1CC0952600A3681D /* main.m in Sources */,
+				E5D3342F1CC0BC8500070A1A /* CALayer+Shadow.m in Sources */,
+				E5D334401CC0DBBA00070A1A /* NSArray+Extension.m in Sources */,
+				E5D3343D1CC0CAA400070A1A /* LiquittableCircle.m in Sources */,
+				E5D334321CC0C0D800070A1A /* CGMath.m in Sources */,
+				E5D334381CC0C82C00070A1A /* SimpleCircleLiquidEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +337,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LiquidFloatingActionButtonOCVersion/LiquidFloatingActionButtonPrefixHeader.pch;
 				INFOPLIST_FILE = LiquidFloatingActionButtonOCVersion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ssdd.LiquidFloatingActionButtonOCVersion;
@@ -272,6 +350,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LiquidFloatingActionButtonOCVersion/LiquidFloatingActionButtonPrefixHeader.pch;
 				INFOPLIST_FILE = LiquidFloatingActionButtonOCVersion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ssdd.LiquidFloatingActionButtonOCVersion;
@@ -298,6 +378,7 @@
 				E5424E6E1CC0952600A3681D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
