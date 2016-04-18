@@ -10,7 +10,6 @@
 static CGFloat const internalRadiusRatio = 20.0 / 56.0;
 @interface LiquidFloatingActionButton()
 @property (nonatomic, assign) CGFloat cellRadiusRatio;
-@property (nonatomic, assign) BOOL enableShadow;
 
 @property (nonatomic, assign) BOOL responsible;
 @property (nonatomic, assign) BOOL isClosed;
@@ -44,6 +43,7 @@ static CGFloat const internalRadiusRatio = 20.0 / 56.0;
     _touching = NO;
     _plusRotation = 0;
     _baseView = [[CircleLiquidBaseView alloc]init];
+    self.baseView.enableShadow = _enableShadow;
     _liquidView = [UIView new];
     
     [self setup];
@@ -155,13 +155,13 @@ static CGFloat const internalRadiusRatio = 20.0 / 56.0;
     
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"path"];
     anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    //todo
-//    NSMutableArray *cgPaths = [NSMutableArray array];
-//    for (UIBezierPath *path in paths) {
-//        
-//        [cgPaths addObject:path.CGPath];
-//    }
-    anim.values = paths;
+    
+    NSMutableArray *cgPaths = [NSMutableArray array];
+    for (UIBezierPath *path in paths) {
+        
+        [cgPaths addObject:(__bridge id)(path.CGPath)];
+    }
+    anim.values = cgPaths;
     anim.duration = 0.5;
     anim.removedOnCompletion = true;
     anim.fillMode = kCAFillModeForwards;
@@ -185,7 +185,9 @@ static CGFloat const internalRadiusRatio = 20.0 / 56.0;
     for (LiquidFloatingCell *cell in [self cellArray]) {
         CGPoint pointForTargetView = [cell convertPoint:point fromView:self];
         if (CGRectContainsPoint(cell.bounds, pointForTargetView)) {
-            return [cell hitTest:pointForTargetView withEvent:event];
+            if (cell.userInteractionEnabled) {
+                return [cell hitTest:pointForTargetView withEvent:event];
+            }
         }
     }
     
@@ -239,6 +241,7 @@ static CGFloat const internalRadiusRatio = 20.0 / 56.0;
 }
 - (void)setEnableShadow:(BOOL)enableShadow {
     _enableShadow = enableShadow;
+    self.baseView.enableShadow = enableShadow;
     [self setNeedsDisplay];
 }
 - (void)setAnimateStyle:(LiquidFloatingActionButtonAnimateStyle)animateStyle {

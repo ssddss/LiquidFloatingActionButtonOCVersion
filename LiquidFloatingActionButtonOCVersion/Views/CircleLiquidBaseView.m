@@ -17,7 +17,6 @@ typedef void(^CellUpdateBlock)(LiquidFloatingCell *,NSInteger,CGFloat);
 @property (nonatomic) SimpleCircleLiquidEngine *engine;
 @property (nonatomic) SimpleCircleLiquidEngine *bigEngine;
 
-@property (nonatomic) BOOL enableShadow;
 
 @property (nonatomic) NSMutableArray *openingCells;
 @property (nonatomic, assign) CGFloat keyDuration;
@@ -41,7 +40,7 @@ typedef void(^CellUpdateBlock)(LiquidFloatingCell *,NSInteger,CGFloat);
 - (void)setup:(LiquidFloatingActionButton *)actionButton {
     self.frame = actionButton.frame;
     self.center = [self minusCurrentPoint:actionButton.center targetPoint:actionButton.frame.origin];
-    //todo
+    
     self.animateStyle = actionButton.animateStyle;
     CGFloat radius = MIN(self.frame.size.width, self.frame.size.height) * 0.5;
     self.engine = [[SimpleCircleLiquidEngine alloc]initWithRadiusThresh:radius * 0.73 angleThresh:0.45];
@@ -78,9 +77,10 @@ typedef void(^CellUpdateBlock)(LiquidFloatingCell *,NSInteger,CGFloat);
     [self stop];
     
     CGFloat distance = self.frame.size.height * 1.25;
+     self.opening = NO;
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(didDisplayRefresh:)];
     [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    self.opening = YES;
+   
     
     for (LiquidFloatingCell *cell in cells) {
         [cell.layer removeAllAnimations];
@@ -109,7 +109,7 @@ typedef void(^CellUpdateBlock)(LiquidFloatingCell *,NSInteger,CGFloat);
         return;
     }
     
-    CGFloat maxDuration = duration + (CGFloat)self.openingCells.count + delay;
+    CGFloat maxDuration = duration + (CGFloat)self.openingCells.count * delay;
     CGFloat t = self.keyDuration;
     CGFloat allRatio = [self easeInEaseOut:t / maxDuration];
     

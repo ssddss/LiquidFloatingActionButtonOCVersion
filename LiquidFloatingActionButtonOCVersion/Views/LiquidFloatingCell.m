@@ -54,7 +54,9 @@ static CGFloat const internalRatio = 0.75;
     
 }
 - (void)setup:(UIImage *)icon {
+//    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.image = [icon imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+//    self.imageView.image = icon;
     self.imageView.tintColor = [UIColor whiteColor];
     [self setupView:self.imageView];
 }
@@ -64,8 +66,12 @@ static CGFloat const internalRatio = 0.75;
     [self resizeSubviews];
 }
 - (void)resizeSubviews {
+    //自己写图片的大小
     CGSize size = CGSizeMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
     self.imageView.frame = CGRectMake(self.frame.size.width - self.frame.size.width * internalRatio, self.frame.size.height - self.frame.size.height * internalRatio, size.width, size.height);
+
+//    CGSize size = CGSizeMake(self.frame.size.width, self.frame.size.height);
+//    self.imageView.frame = CGRectMake(self.frame.size.width - self.frame.size.width * internalRatio, self.frame.size.height - self.frame.size.height * internalRatio, size.width, size.height);
 }
 - (void)updateKey:(CGFloat)key open:(BOOL)open {
     for (UIView *subview in self.subviews) {
@@ -92,7 +98,7 @@ static CGFloat const internalRatio = 0.75;
 }
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     self.color = self.originalColor;
-    //todo
+    [self.actionButton didTappedCell:self];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

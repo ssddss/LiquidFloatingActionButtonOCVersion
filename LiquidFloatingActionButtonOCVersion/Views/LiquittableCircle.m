@@ -25,7 +25,7 @@
 - (instancetype)init {
     self = [super initWithFrame:CGRectZero];
     
-    self.color = [UIColor redColor];
+    _color = [UIColor redColor];
     self.radius = 0;
     [self setup];
     [self.layer addSublayer:self.circleLayer];

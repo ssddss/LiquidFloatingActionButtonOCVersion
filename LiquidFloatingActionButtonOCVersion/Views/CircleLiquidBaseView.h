@@ -11,6 +11,8 @@
 @interface CircleLiquidBaseView : ActionBarBaseView
 @property (nonatomic) UIColor *color;
 @property (nonatomic, assign) LiquidFloatingActionButtonAnimateStyle animateStyle;
+@property (nonatomic) BOOL enableShadow;
+
 - (void)open:(NSArray *)cells;
 - (void)close:(NSArray *)cells;
 @end

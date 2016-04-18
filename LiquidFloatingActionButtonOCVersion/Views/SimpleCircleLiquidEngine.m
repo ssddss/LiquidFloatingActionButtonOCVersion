@@ -56,10 +56,10 @@
 }
 - (void)clear {
     [self.layer removeFromSuperlayer];
-    for (CALayer *layer in self.layer.sublayers) {
-        [layer removeFromSuperlayer];
-    }
-    
+//    for (CALayer *layer in self.layer.sublayers) {
+//        [layer removeFromSuperlayer];
+//    }
+    self.layer = nil;
     self.layer = [CAShapeLayer new];
 }
 - (CALayer *)constructLayer:(UIBezierPath *)path {

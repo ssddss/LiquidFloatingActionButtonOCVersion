@@ -33,7 +33,10 @@ typedef NS_ENUM(NSInteger, LiquidFloatingActionButtonAnimateStyle) {
 @interface LiquidFloatingActionButton : UIView
 @property (nonatomic, assign) LiquidFloatingActionButtonAnimateStyle animateStyle;
 @property (nonatomic) UIColor *color;
+@property (nonatomic, assign) BOOL enableShadow;
 
 @property (nonatomic, weak) id<LiquidFloatingActionButtonDelegate> delegate;
 @property (nonatomic, weak) id<LiquidFloatingActionButtonDataSource> dataSource;
+
+- (void)didTappedCell:(LiquidFloatingCell *)target;
 @end

@@ -18,7 +18,7 @@
 
 + (NSValue *)circlePoint:(CGPoint)center radius:(CGFloat)radius rad:(CGFloat)rad {
     CGFloat x = center.x + radius * cos(rad);
-    CGFloat y = center.y + radius * cos(rad);
+    CGFloat y = center.y + radius * sin(rad);
     NSValue *value = [NSValue valueWithCGPoint:CGPointMake(x, y)];
     return value;
 }
