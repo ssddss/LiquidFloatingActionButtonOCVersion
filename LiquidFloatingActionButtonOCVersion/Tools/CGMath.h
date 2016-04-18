@@ -13,7 +13,7 @@
 
 + (CGFloat)degToRad:(CGFloat)deg;
 
-+ (CGPoint)circlePoint:(CGPoint)center radius:(CGFloat)radius rad:(CGFloat)rad;
++ (NSValue *)circlePoint:(CGPoint)center radius:(CGFloat)radius rad:(CGFloat)rad;
 
 + (NSArray *)linSpaceFrom:(CGFloat)from to:(CGFloat)to n:(NSInteger)n;
 @end

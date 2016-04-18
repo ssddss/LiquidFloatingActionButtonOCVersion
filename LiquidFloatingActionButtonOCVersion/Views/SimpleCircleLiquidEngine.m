@@ -12,8 +12,6 @@
 @property (nonatomic, assign) CGFloat radiusThresh;
 @property (nonatomic) CALayer *layer;
 
-@property (nonatomic, assign) CGFloat viscosity;
-@property (nonatomic) UIColor *color;
 @property (nonatomic, assign) CGFloat angleOpen;
 
 @property (nonatomic, assign) CGFloat ConnectThresh;

@@ -16,5 +16,9 @@
 #import "LiquittableCircle.h"
 #import "NSObject+BezierPath.h"
 #import "NSArray+Extension.h"
+#import "LiquidFloatingActionButton.h"
+#import "LiquidFloatingCell.h"
+#import "SimpleCircleLiquidEngine.h"
+#import "CircleLiquidBaseView.h"
 
 #endif /* LiquidFloatingButtonHeader_h */

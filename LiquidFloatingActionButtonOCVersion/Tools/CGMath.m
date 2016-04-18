@@ -16,11 +16,11 @@
     return deg * (CGFloat)M_PI / 180;
 }
 
-+ (CGPoint)circlePoint:(CGPoint)center radius:(CGFloat)radius rad:(CGFloat)rad {
++ (NSValue *)circlePoint:(CGPoint)center radius:(CGFloat)radius rad:(CGFloat)rad {
     CGFloat x = center.x + radius * cos(rad);
     CGFloat y = center.y + radius * cos(rad);
-    
-    return CGPointMake(x, y);
+    NSValue *value = [NSValue valueWithCGPoint:CGPointMake(x, y)];
+    return value;
 }
 
 + (NSArray *)linSpaceFrom:(CGFloat)from to:(CGFloat)to n:(NSInteger)n {

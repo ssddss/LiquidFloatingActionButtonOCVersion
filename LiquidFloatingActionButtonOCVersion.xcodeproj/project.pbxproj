@@ -21,6 +21,10 @@
 		E5D3343D1CC0CAA400070A1A /* LiquittableCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3343C1CC0CAA400070A1A /* LiquittableCircle.m */; };
 		E5D334401CC0DBBA00070A1A /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3343F1CC0DBBA00070A1A /* NSArray+Extension.m */; };
 		E5D334431CC0E65000070A1A /* NSObject+BezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D334421CC0E65000070A1A /* NSObject+BezierPath.m */; };
+		E5D334461CC4724D00070A1A /* LiquidFloatingActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D334451CC4724D00070A1A /* LiquidFloatingActionButton.m */; };
+		E5D334491CC473C800070A1A /* LiquidFloatingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D334481CC473C800070A1A /* LiquidFloatingCell.m */; };
+		E5D3344C1CC47BC000070A1A /* ActionBarBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3344B1CC47BC000070A1A /* ActionBarBaseView.m */; };
+		E5D3344F1CC47EF900070A1A /* CircleLiquidBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3344E1CC47EF900070A1A /* CircleLiquidBaseView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,14 @@
 		E5D3343F1CC0DBBA00070A1A /* NSArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
 		E5D334411CC0E65000070A1A /* NSObject+BezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BezierPath.h"; sourceTree = "<group>"; };
 		E5D334421CC0E65000070A1A /* NSObject+BezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BezierPath.m"; sourceTree = "<group>"; };
+		E5D334441CC4724D00070A1A /* LiquidFloatingActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiquidFloatingActionButton.h; sourceTree = "<group>"; };
+		E5D334451CC4724D00070A1A /* LiquidFloatingActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiquidFloatingActionButton.m; sourceTree = "<group>"; };
+		E5D334471CC473C800070A1A /* LiquidFloatingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiquidFloatingCell.h; sourceTree = "<group>"; };
+		E5D334481CC473C800070A1A /* LiquidFloatingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiquidFloatingCell.m; sourceTree = "<group>"; };
+		E5D3344A1CC47BC000070A1A /* ActionBarBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionBarBaseView.h; sourceTree = "<group>"; };
+		E5D3344B1CC47BC000070A1A /* ActionBarBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionBarBaseView.m; sourceTree = "<group>"; };
+		E5D3344D1CC47EF900070A1A /* CircleLiquidBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLiquidBaseView.h; sourceTree = "<group>"; };
+		E5D3344E1CC47EF900070A1A /* CircleLiquidBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLiquidBaseView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +129,14 @@
 				E5D334371CC0C82C00070A1A /* SimpleCircleLiquidEngine.m */,
 				E5D3343B1CC0CAA400070A1A /* LiquittableCircle.h */,
 				E5D3343C1CC0CAA400070A1A /* LiquittableCircle.m */,
+				E5D334441CC4724D00070A1A /* LiquidFloatingActionButton.h */,
+				E5D334451CC4724D00070A1A /* LiquidFloatingActionButton.m */,
+				E5D334471CC473C800070A1A /* LiquidFloatingCell.h */,
+				E5D334481CC473C800070A1A /* LiquidFloatingCell.m */,
+				E5D3344A1CC47BC000070A1A /* ActionBarBaseView.h */,
+				E5D3344B1CC47BC000070A1A /* ActionBarBaseView.m */,
+				E5D3344D1CC47EF900070A1A /* CircleLiquidBaseView.h */,
+				E5D3344E1CC47EF900070A1A /* CircleLiquidBaseView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,11 +238,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5424E601CC0952600A3681D /* ViewController.m in Sources */,
+				E5D3344C1CC47BC000070A1A /* ActionBarBaseView.m in Sources */,
+				E5D334461CC4724D00070A1A /* LiquidFloatingActionButton.m in Sources */,
 				E5424E5D1CC0952600A3681D /* AppDelegate.m in Sources */,
 				E5D334431CC0E65000070A1A /* NSObject+BezierPath.m in Sources */,
 				E5424E741CC0969800A3681D /* NSObject+PointExtension.m in Sources */,
 				E5D334351CC0C48E00070A1A /* UIColor+Extension.m in Sources */,
 				E5424E5A1CC0952600A3681D /* main.m in Sources */,
+				E5D3344F1CC47EF900070A1A /* CircleLiquidBaseView.m in Sources */,
+				E5D334491CC473C800070A1A /* LiquidFloatingCell.m in Sources */,
 				E5D3342F1CC0BC8500070A1A /* CALayer+Shadow.m in Sources */,
 				E5D334401CC0DBBA00070A1A /* NSArray+Extension.m in Sources */,
 				E5D3343D1CC0CAA400070A1A /* LiquittableCircle.m in Sources */,

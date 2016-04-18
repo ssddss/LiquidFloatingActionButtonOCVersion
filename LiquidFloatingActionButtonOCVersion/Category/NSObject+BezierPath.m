@@ -9,13 +9,7 @@
 #import "NSObject+BezierPath.h"
 
 @implementation NSObject (BezierPath)
-- (UIBezierPath *)withBezierTarget:(NSObject *)target methodName:(SEL)methodName {
-    UIBezierPath *bezierPath = [UIBezierPath new];
-    [target performSelector:methodName withObject:bezierPath];
-    [bezierPath closePath];
-    
-    return bezierPath;
-}
+
 - (UIBezierPath *)withBezier:(BezierPathBlock)bezierBlock {
     UIBezierPath *bezierPath = [UIBezierPath new];
     bezierBlock(bezierPath);

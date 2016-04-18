@@ -11,7 +11,6 @@
 @property (nonatomic) NSMutableArray *points;/**< NSValue类型的数据，里面是CGPoint*/
 @property (nonatomic) CAShapeLayer *circleLayer;
 
-@property (nonatomic) UIColor *color;
 @end
 @implementation LiquittableCircle
 
@@ -71,7 +70,7 @@
     [self drawCircle];
 }
 - (CGPoint)circlePoint:(CGFloat)rad {
-    return [CGMath circlePoint:self.center radius:self.radius rad:rad];
+    return [CGMath circlePoint:self.center radius:self.radius rad:rad].CGPointValue;
 }
 - (void)setColor:(UIColor *)color {
     _color = color;

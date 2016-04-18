@@ -12,5 +12,4 @@ typedef void (^BezierPathBlock)(UIBezierPath *path);
 @interface NSObject (BezierPath)
 
 - (UIBezierPath *)withBezier:(BezierPathBlock)bezierBlock;
-- (UIBezierPath *)withBezierTarget:(NSObject *)target methodName:(SEL)methodName;
 @end

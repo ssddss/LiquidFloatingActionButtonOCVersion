@@ -10,6 +10,7 @@
 
 @interface LiquittableCircle : UIView
 @property (nonatomic, assign) CGFloat radius;
+@property (nonatomic) UIColor *color;
 
 - (instancetype)init;
 - (instancetype)initCenter:(CGPoint)center radius:(CGFloat)radius color:(UIColor *)color;
