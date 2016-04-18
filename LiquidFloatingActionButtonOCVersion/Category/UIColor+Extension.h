@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface UIColor (Extension)
-- (CGFloat)red;
+- (CGFloat)yrd_red;
 
-- (CGFloat)green;
+- (CGFloat)yrd_green;
 
-- (CGFloat)blue;
+- (CGFloat)yrd_blue;
 
-- (CGFloat)alpha;
+- (CGFloat)yrd_alpha;
 
-- (UIColor *)alphaByAlpha:(CGFloat)alpha;
+- (UIColor *)yrd_alphaByAlpha:(CGFloat)alpha;
 
-- (UIColor *)whiteScale:(CGFloat)scale;
+- (UIColor *)yrd_whiteScale:(CGFloat)scale;
 @end

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class LiquidFloatingActionButton,LiquidFloatingCell;
 
 //数据源代理
@@ -33,6 +32,9 @@ typedef NS_ENUM(NSInteger, LiquidFloatingActionButtonAnimateStyle) {
 @interface LiquidFloatingActionButton : UIView
 @property (nonatomic, assign) LiquidFloatingActionButtonAnimateStyle animateStyle;
 @property (nonatomic) UIColor *color;
+
+@property (nonatomic) UIColor *startLiquidColor;/**< 开始水滴颜色*/
+@property (nonatomic) UIColor *afterStartLiquidColor;/**< 之后过渡水滴的颜色*/
 @property (nonatomic, assign) BOOL enableShadow;
 
 @property (nonatomic, weak) id<LiquidFloatingActionButtonDelegate> delegate;

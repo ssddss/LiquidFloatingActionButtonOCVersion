@@ -28,7 +28,7 @@ typedef void(^CellUpdateBlock)(LiquidFloatingCell *,NSInteger,CGFloat);
     if (!self) {
         return nil;
     }
-    _openDuration = 0.6;
+    _openDuration = 0.35;
     _closeDuration = 0.2;
     _viscosity = 0.65;
     _animateStyle = Up;
@@ -49,7 +49,7 @@ typedef void(^CellUpdateBlock)(LiquidFloatingCell *,NSInteger,CGFloat);
     self.bigEngine.viscosity = self.viscosity;
     self.engine.color = actionButton.color;
     self.bigEngine.color = actionButton.color;
-    self.baseLiquid = [[LiquittableCircle alloc]initCenter:[self minusCurrentPoint:self.center targetPoint:self.frame.origin] radius:radius color:actionButton.color];
+    self.baseLiquid = [[LiquittableCircle alloc]initCenter:[self minusCurrentPoint:self.center targetPoint:self.frame.origin] radius:radius color: actionButton.color];
     
     self.baseLiquid.clipsToBounds = NO;
     self.baseLiquid.layer.masksToBounds = NO;
@@ -145,14 +145,14 @@ typedef void(^CellUpdateBlock)(LiquidFloatingCell *,NSInteger,CGFloat);
 - (void)updateOpen {
     [self update:0.1 duration:self.openDuration block:^(LiquidFloatingCell *cell, NSInteger i, CGFloat ratio) {
         CGFloat posRatio = ratio > (CGFloat)i / (CGFloat)(self.openingCells.count) ? ratio : 0;
-        CGFloat distance = (cell.frame.size.height * 0.5 + (CGFloat)(i + 1) * cell.frame.size.height * 1.5) * posRatio;
+        CGFloat distance =  ((CGFloat)(i + 1) * cell.frame.size.height * 1.3) * posRatio;
         cell.center = [self plusCurrentPoint:self.center targetPoint:[self differencePoint:distance]];
         [cell updateKey:ratio open:YES];
     }];
 }
 - (void)updateClose {
     [self update:0 duration:self.closeDuration block:^(LiquidFloatingCell *cell, NSInteger i, CGFloat ratio) {
-        CGFloat distance = (cell.frame.size.height * 0.5 + (CGFloat)(i + 1) * cell.frame.size.height * 1.5) * (1 - ratio);
+        CGFloat distance = ( (CGFloat)(i + 1) * cell.frame.size.height * 1.3) * (1 - ratio);
         cell.center = [self plusCurrentPoint:self.center targetPoint:[self differencePoint:distance]];
         [cell updateKey:ratio open:NO];
     }];
@@ -214,10 +214,19 @@ typedef void(^CellUpdateBlock)(LiquidFloatingCell *,NSInteger,CGFloat);
     // Drawing code
 }
 */
+- (void)setLiquidStartColor:(UIColor *)startColor endColor:(UIColor *)endColor {
+    if (endColor) {
+        self.engine.color = endColor;
+    }
+    if (startColor) {
+        self.bigEngine.color = startColor;
+    }
+}
 - (void)setColor:(UIColor *)color {
     _color = color;
     self.engine.color = color;
     self.bigEngine.color = color;
+ 
 }
 - (NSMutableArray *)openingCells {
     if (!_openingCells) {

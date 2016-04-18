@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
     CGRect floatingFrame = CGRectMake(16, self.view.frame.size.height - 56 - 300, 56, 56);
     LiquidFloatingActionButton *floatingActionButton = [self floatingActionButtonFectory:floatingFrame animateStyle:Down];
@@ -42,16 +43,24 @@
     // Dispose of any resources that can be recreated.
 }
 - (LiquidFloatingCell *)cellFectory:(NSString *)iconName {
-    return [[LiquidFloatingCell alloc]initIcon:[UIImage imageNamed:iconName]];
+    LiquidFloatingCell *cell =  [[LiquidFloatingCell alloc]initIcon:[UIImage imageNamed:iconName]];
+    if ([iconName isEqualToString:@"course_Roam"]) {
+        cell.color = UIColorFromRGBAndAlpha(0x92d860, 0.95);
+    }
+    else {
+    cell.color = UIColorFromRGBAndAlpha(0xffd11f, 0.95);
+    }
+    return cell;
 }
 - (NSMutableArray *)cells {
     if (!_cells) {
         _cells = [NSMutableArray array];
-//        [_cells addObject:[self cellFectory:@"course_Roam"]];
-//        [_cells addObject:[self cellFectory:@"course_Custom"]];
-        [_cells addObject:[self cellFectory:@"ic_system"]];
-        [_cells addObject:[self cellFectory:@"ic_place"]];
-        [_cells addObject:[self cellFectory:@"ic_cloud"]];
+        [_cells addObject:[self cellFectory:@"course_Custom"]];
+        [_cells addObject:[self cellFectory:@"course_Roam"]];
+
+//        [_cells addObject:[self cellFectory:@"ic_system"]];
+//        [_cells addObject:[self cellFectory:@"ic_place"]];
+//        [_cells addObject:[self cellFectory:@"ic_cloud"]];
 
     }
     return _cells;
@@ -59,10 +68,13 @@
 - (LiquidFloatingActionButton *)floatingActionButtonFectory:(CGRect)rect animateStyle:(LiquidFloatingActionButtonAnimateStyle)style {
     
     LiquidFloatingActionButton *floatingActionButton = [[LiquidFloatingActionButton alloc]initWithFrame:rect];
+    floatingActionButton.color = UIColorFromRGBAndAlpha(0x18b4ed, 0.95);
     floatingActionButton.enableShadow = NO;
     floatingActionButton.animateStyle = style;
     floatingActionButton.dataSource = self;
     floatingActionButton.delegate = self;
+    floatingActionButton.afterStartLiquidColor = UIColorFromRGBAndAlpha(0x92d860, 0.95);
+    floatingActionButton.startLiquidColor = UIColorFromRGBAndAlpha(0xffd11f, 0.95);
     return floatingActionButton;
 }
 #pragma protocol

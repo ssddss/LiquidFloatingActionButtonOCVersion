@@ -21,4 +21,5 @@
 #import "SimpleCircleLiquidEngine.h"
 #import "CircleLiquidBaseView.h"
 
+#import "Macro.h"
 #endif /* LiquidFloatingButtonHeader_h */

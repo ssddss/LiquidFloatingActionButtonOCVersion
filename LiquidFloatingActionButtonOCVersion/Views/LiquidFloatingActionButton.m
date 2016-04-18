@@ -52,7 +52,7 @@ static CGFloat const internalRadiusRatio = 20.0 / 56.0;
 }
 
 - (void)insertCell:(LiquidFloatingCell *)cell {
-    cell.color  = self.color;
+//    cell.color  = self.color;
     cell.radius = self.frame.size.width * self.cellRadiusRatio;
     cell.center = [self minusCurrentPoint:self.center targetPoint:self.frame.origin];
     cell.actionButton = self;
@@ -98,7 +98,7 @@ static CGFloat const internalRadiusRatio = 20.0 / 56.0;
     self.circleLayer.cornerRadius = self.frame.size.width * 0.5;
     self.circleLayer.masksToBounds = YES;
     if (self.touching && self.responsible) {
-        self.circleLayer.backgroundColor = [self.color whiteScale:0.5].CGColor;
+        self.circleLayer.backgroundColor = [self.color yrd_whiteScale:0.5].CGColor;
     }
     else {
         self.circleLayer.backgroundColor = self.color.CGColor;
@@ -234,6 +234,14 @@ static CGFloat const internalRadiusRatio = 20.0 / 56.0;
 - (void)setColor:(UIColor *)color {
     _color = color;
     self.baseView.color = color;
+}
+- (void)setStartLiquidColor:(UIColor *)startLiquidColor {
+    _startLiquidColor = startLiquidColor;
+    [self.baseView setLiquidStartColor:startLiquidColor endColor:nil];
+}
+- (void)setAfterStartLiquidColor:(UIColor *)afterStartLiquidColor {
+    _afterStartLiquidColor = afterStartLiquidColor;
+    [self.baseView setLiquidStartColor:nil endColor:afterStartLiquidColor];
 }
 - (BOOL)isClosed {
   return self.plusRotation == 0;

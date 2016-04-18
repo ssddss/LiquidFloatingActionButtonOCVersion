@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LiquidFloatingActionButton.h"
 typedef void(^AnimationBlock)(CABasicAnimation *basicAnimation);
 @interface ActionBarBaseView : UIView
 @property (nonatomic, assign) BOOL opening;

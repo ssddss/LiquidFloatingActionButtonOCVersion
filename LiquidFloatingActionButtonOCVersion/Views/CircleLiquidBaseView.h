@@ -12,7 +12,7 @@
 @property (nonatomic) UIColor *color;
 @property (nonatomic, assign) LiquidFloatingActionButtonAnimateStyle animateStyle;
 @property (nonatomic) BOOL enableShadow;
-
+- (void)setLiquidStartColor:(UIColor *)startColor endColor:(UIColor *)endColor;
 - (void)open:(NSArray *)cells;
 - (void)close:(NSArray *)cells;
 @end
